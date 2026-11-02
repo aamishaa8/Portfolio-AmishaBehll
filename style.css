@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+
+/* I chose a cream background with red text so the whole site uses one warm,
+   simple colour scheme. I used rem for the text size so it grows if someone
+   makes their browser text bigger, to make it responsive */
+
+body {
+margin: 0;
+background: #fffdf0;
+color: #d9141c;
+font-family: Arial, sans-serif;
+font-size: 0.8rem;
+line-height: 1.4;
+text-transform: uppercase;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+a {
+color: #d9141c;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+padding: 1.25rem 1.5rem;
+}
+header p {
+margin: 0;
+}
+header p a {
+text-decoration: none;
+}
+
+nav a {
+margin-left: 1.5rem;
+}
+
+main {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+/* I made the page titles much larger than the body text so they stand out
+   as the main heading. I used rem instead of px so they scale  */
+
+h1 {
+margin: 0 0 2rem;
+font-family: 'Instrument Serif', Georgia, serif;
+font-weight: normal;
+font-size: 10rem;
+line-height: 1;
+text-transform: none;
+}
+main p {
+max-width: 22rem;
+margin: 0 0 2rem;
+}
+
+main.page {
+align-items: stretch;
+justify-content: flex-start;
+text-align: left;
+padding: 2rem 1.5rem 4rem;
+}
+main.page h1 {
+font-size: 8rem;
+margin-bottom: 3rem;
+}
+h2 {
+margin: 0 0 1rem;
+font-size: 0.8rem;
+font-weight: bold;
+}
+ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+li {
+margin-bottom: 0.5rem;
+}
+
+main.page > h2 {
+margin-bottom: 2rem;
+font-size: 1.1rem;
+font-weight: normal;
+}
+
+/* I used flex-wrap so the two columns sit side by side on a big screen and
+   stack on a phone. The sizes use flex: 1 1 24rem, so each column grows or
+   shrinks to fit, which makes the page responsive without extra code. */
+   
+.about-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 3rem 5rem;
+}
+.about-column {
+flex: 1 1 24rem;
+max-width: 40rem;
+}
+.about-column h3 {
+margin: 0 0 0.75rem;
+font-size: 0.8rem;
+}
+
+.entry {
+display: flex;
+flex-wrap: wrap;
+margin-bottom: 0.75rem;
+}
+.entry span {
+flex: 1;
+}
+.entry .year {
+flex: 0 0 3.25rem;
+}
+.entry .small-text {
+flex: 0 0 100%;
+box-sizing: border-box;
+padding-left: 3.25rem;
+font-size: 0.7rem;
+opacity: 0.7;
+}
+
+.projects {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem 1.5rem;
+}
+.project {
+flex: 1 1 24rem;
+max-width: 36rem;
+}
+.project img {
+width: 100%;
+height: auto;
+}
+.project h2 {
+margin: 0.9rem 0 0.25rem;
+}
